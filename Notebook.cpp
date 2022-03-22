@@ -10,21 +10,21 @@
 #include "Notebook.hpp"
 namespace ariel{
 
-        void Notebook::erase(unsigned int page, unsigned int row, unsigned int col, ariel::Direction direction,
-                             unsigned int amountToErase) {
+        void Notebook::erase(int page, int row, int col, ariel::Direction direction,
+                             int amountToErase) {
 
         }
 
-        std::string Notebook::read(unsigned int pageNumber,unsigned int row,unsigned int col,ariel::Direction direction,unsigned int amountToRead){
+        std::string Notebook::read(int pageNumber,int row,int col,ariel::Direction direction,int amountToRead){
 
             return "read function";
         }
 
-        void Notebook::show(unsigned int page) {
+        void Notebook::show(int page) {
 
         }
 
-        void Notebook::write(unsigned int page,unsigned int row,unsigned int col,ariel::Direction direction,std::string text){
+        void Notebook::write(int page,int row,int col,ariel::Direction direction,std::string text){
 
         }
         Notebook::Notebook() {

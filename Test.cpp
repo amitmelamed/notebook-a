@@ -22,8 +22,20 @@ TEST_CASE("bad input"){
         CHECK_THROWS(notebook.read(104,102,1205,Direction::Horizontal,30));
         CHECK_THROWS(notebook.erase(50,20,150,ariel::Direction::Horizontal,105));
         CHECK_THROWS(notebook.erase(50,220,610,ariel::Direction::Horizontal,46));
-
-
+    }
+    SUBCASE("negative input"){
+        Notebook notebook;
+        CHECK_THROWS(notebook.write(-10,10,10,Direction::Horizontal,"123"));
+        CHECK_THROWS(notebook.write(10,-10,10,Direction::Horizontal,"123"));
+        CHECK_THROWS(notebook.write(10,10,-10,Direction::Horizontal,"123"));
+        CHECK_THROWS(notebook.read(-10,10,10,Direction::Horizontal,10));
+        CHECK_THROWS(notebook.read(10,-10,10,Direction::Horizontal,10));
+        CHECK_THROWS(notebook.read(10,10,-10,Direction::Horizontal,10));
+        CHECK_THROWS(notebook.read(10,10,10,Direction::Horizontal,-10));
+        CHECK_THROWS(notebook.erase(-10,10,10,Direction::Horizontal,10));
+        CHECK_THROWS(notebook.erase(10,-10,10,Direction::Horizontal,10));
+        CHECK_THROWS(notebook.erase(10,10,-10,Direction::Horizontal,10));
+        CHECK_THROWS(notebook.erase(10,10,10,Direction::Horizontal,-10));
     }
 
 }
