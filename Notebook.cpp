@@ -4,25 +4,34 @@
 #include <string>
 #include "Direction.hpp"
 #include <iostream>
+#include <vector>
+
 
 #include "Notebook.hpp"
 namespace ariel{
-    void Notebook::erase(int page, int row, int col, ariel::Direction direction,
-                         int amountToErase) {
 
-    }
+        void Notebook::erase(unsigned int page, unsigned int row, unsigned int col, ariel::Direction direction,
+                             unsigned int amountToErase) {
 
-    std::string Notebook::read(int page,int row,int col,ariel::Direction direction,int amountToRead){
-        return "read";
-    }
+        }
 
-    void Notebook::show(int page) {
+        std::string Notebook::read(unsigned int pageNumber,unsigned int row,unsigned int col,ariel::Direction direction,unsigned int amountToRead){
 
-    }
+            return "read function";
+        }
 
-    void Notebook::write(int page,int row,int col,ariel::Direction direction,std::string text){
+        void Notebook::show(unsigned int page) {
 
-    }
+        }
+
+        void Notebook::write(unsigned int page,unsigned int row,unsigned int col,ariel::Direction direction,std::string text){
+
+        }
+        Notebook::Notebook() {
+
+        }
+
+
 }
 
 

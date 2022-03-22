@@ -2,14 +2,24 @@
 
 #include <string>
 #include "Direction.hpp"
-
+#include <vector>
+#include <iterator>
+#include <map>
+using namespace std;
 namespace ariel {
-    class Notebook {
 
+    class Page{
+
+
+    };
+    class Notebook {
+    private:
+        map<int, Page> pagesMap;
     public:
-        void write(int page, int row, int col, Direction dir, std::string text);
-        std::string read(int page, int row, int col, Direction dir, int len);
-        void erase(int page, int row, int col, Direction dir, int len);
-        void show(int page);
+        Notebook();
+        void write(unsigned int page, unsigned int row, unsigned int col, Direction dir, string text);
+        string read(unsigned int page, unsigned int row, unsigned int col, Direction dir, unsigned int len);
+        void erase(unsigned int page, unsigned int row, unsigned int col, Direction dir, unsigned int len);
+        void show(unsigned int page);
     };
 }
